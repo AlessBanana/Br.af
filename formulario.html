@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Br</title>
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="fondo">
+    <fieldset class="formulario">
+        <h1>Breaking Bad - ¡Que comience el juego!</h1>
+        <form name="formulario" method="post" action="mailto:raul.rodriguez@proeducaglobal.com">
+            <fieldset class="datos Personales">
+                <legend>Datos Personales</legend>
+                <label>Nombre:</label> <input type="text" name="nombre" placeholder="Introduce tu nombre" 
+                minlength="2" maxlength="40" required>
+                <label>Apellidos:</label> <input type="text" name="apellidos" placeholder="Introduce tu apellido" minlength="2" maxlength="40" required>
+                <br>
+                <label>DNI:</label><input type="text" name="dni" placeholder="ej: 000000Z">
+                <label>Email:</label><input type="email" name="email" placeholder="correo@example.com" required>
+                <!--Botones opción sexo-->
+                <p>Sexo</p>
+                <input type="radio" name="sexo" value="H"> <label>Hombre</label>
+                <input type="radio" name="sexo" value="M"> <label>Mujer</label>
+                <!--Calendario-->
+                <p>Fecha de Nacimiento</p>
+                <input type="date" name="fecha">
+            </fieldset>
+            <!--Caja dirección postal-->
+            <fieldset class="direccion">
+                <legend>Dirección Postal</legend>
+                    <label>Calle:</label> <input type="text">
+                    <label>Número:</label> <input type="number">
+                    <br>
+                    <label>Piso:</label> <input type="text">
+                    <br>
+                    <label>C.P:</label> <input type="text">
+                    <label>Ciudad:</label> <input type="text">
+            </fieldset>
+            <!--Desplegable-->
+            <p>Selecciona tu personaje favorito</p>
+                <input list="personajes" placeholder="Mi espiritu Br">
+                <datalist id="personajes">
+                    <option value="Jesse Pinkman"></option>
+                    <option value="Walter White"></option>
+                    <option value="Saul Goodman"></option>
+                    <option value="Gustavo Fring"></option>
+                    <option value="Pollos Hermanos"></option>
+                    <option value="Otros Personajes"></option>
+                </datalist>
+
+            <!--Zona comentarios-->
+            <p>Dejanos tu mensaje</p>
+            <textarea name="texto" cols="80" rows="10" placeholder="¡Escríbenos tu mensaje!"></textarea>
+            <br>
+            <input type="submit" value="Enviar" class="boton" onclick="alert('Formulario recibido, ahora alejate de mi territorio')">
+            <input type="reset" value="Restablecer" class="boton">
+            <input type="file" name="adjuntar" value="Seleccionar archivo" class="boton">
+        </form>
+    </fieldset>
+</body>
+</html>
